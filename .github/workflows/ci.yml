@@ -32,6 +32,7 @@ jobs:
       - name: Setup ${{ matrix.toolchain }} toolchain
         uses: actions-rs/toolchain@v1
         with:
+          profile: complete
           toolchain: ${{ matrix.toolchain }}
           override: true
 
