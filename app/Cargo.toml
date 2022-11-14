@@ -1,0 +1,10 @@
+[package]
+name = "app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+thiserror = "1.0"
+argh = "0.1.9"
+colored = "2.0.0"
+simple-graph = { path = "../simple-graph" }
