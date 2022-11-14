@@ -21,7 +21,7 @@ simple-graph = "0.1.0"
 
 ### Examples
 
-Go to the [`Graph<V, E>` on docs.rs/simple-graph]() for online documentation
+Go to the [`Graph<V, E>` on docs.rs/simple-graph](https://docs.rs/simple-graph/latest/simple-graph/struct.Graph.html) for online documentation
 
 I wrote a perfect documentation for all files in code using the `///` rust built-in feature
 
