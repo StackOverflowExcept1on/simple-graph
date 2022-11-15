@@ -21,7 +21,8 @@ simple-graph = "0.1.0"
 
 ### Examples
 
-Go to the [`Graph<V, E>` on docs.rs/simple-graph](https://docs.rs/simple-graph/latest/simple-graph/struct.Graph.html) for online documentation
+Go to the [`Graph<V, E>` on docs.rs/simple-graph](https://docs.rs/simple-graph/latest/simple_graph/struct.Graph.html)
+for online documentation
 
 I wrote a perfect documentation for all files in code using the `///` rust built-in feature
 
@@ -165,7 +166,7 @@ the [Cargo Workspaces](https://doc.rust-lang.org/book/ch14-03-cargo-workspaces.h
 
 ### Cool Trivial Graph Format (TGF) serializer/deserializer
 
-I wrote really cool parser that can handle many errors and nicely print in for the use
+I wrote really cool parser that can handle many errors and nicely print in for the user
 
 `test.tgf`
 ```
