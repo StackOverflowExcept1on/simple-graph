@@ -6,7 +6,7 @@ edition = "2021"
 description = "Graph library with ability to serialize/deserialize Trivial Graph Format"
 repository = "https://github.com/StackOverflowExcept1on/simple-graph"
 license = "MIT"
-keywords = ["graph", "breadth-first-search"]
+keywords = ["graph", "breadth-first-search", "depth-first-search"]
 categories = ["data-structures", "parsing"]
 
 [dependencies]
