@@ -37,7 +37,7 @@ impl<V: Label, E: Label> Display for Graph<V, E> {
         for (n, (&vertex_id, _)) in (1_usize..).zip(self.vertices.iter()) {
             if let Ok(vertex_data) = self.get_vertex(vertex_id) {
                 vertices.insert(vertex_id, n);
-                writeln!(f, "{n} {}", vertex_data)?;
+                writeln!(f, "{n} {vertex_data}")?;
             }
         }
 
@@ -47,7 +47,7 @@ impl<V: Label, E: Label> Display for Graph<V, E> {
             let from_id = self.get_vertex_id(from);
             let to_id = self.get_vertex_id(to);
             if let Some((from, to)) = vertices.get(&from_id).zip(vertices.get(&to_id)) {
-                writeln!(f, "{from} {to} {}", edge)?;
+                writeln!(f, "{from} {to} {edge}")?;
             }
         }
 
