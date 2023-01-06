@@ -112,7 +112,7 @@ impl<V: Label, E: Label> FromStr for Graph<V, E> {
                 ParserMode::VertexDefinitions => {
                     let s = it.next().ok_or(ParseGraphError::VertexDefinition(n))?;
                     let index = parse_index(s, n)?;
-                    let label: V = parse_label(it.as_str(), n)?;
+                    let label: V = parse_label(it.remainder().unwrap_or(""), n)?;
 
                     let vertex_id = graph
                         .add_vertex(label)
@@ -130,7 +130,7 @@ impl<V: Label, E: Label> FromStr for Graph<V, E> {
 
                     let from = parse_index(from, n)?;
                     let to = parse_index(to, n)?;
-                    let label: E = parse_label(it.as_str(), n)?;
+                    let label: E = parse_label(it.remainder().unwrap_or(""), n)?;
 
                     let (&from, &to) = vertices
                         .get(&from)
