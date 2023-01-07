@@ -6,6 +6,7 @@ use linked_hash_set::LinkedHashSet;
 
 use super::{GraphOperationError, Label, Result};
 
+/// Represents hash of vertex and is used to access the HashMap
 #[derive(Debug, Copy, Clone, Ord, PartialOrd, Eq, PartialEq, Hash)]
 pub struct VertexId(u64);
 
