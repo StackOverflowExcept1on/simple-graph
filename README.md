@@ -28,7 +28,9 @@ I wrote a perfect documentation for all files in code using the `///` rust built
 
 You can also read [`simple-graph/src/graph.rs`](simple-graph/src/graph.rs)
 
-### Implemented algorithms in the binary [app](app)
+### Implemented graph algorithms in the binary [app](app)
+
+![graphAlgorithms](simple-graph/assets/dfs-vs-bfs.gif)
 
 #### Breadth-first search algorithm (BFS)
 
