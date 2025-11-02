@@ -6,7 +6,7 @@ members = [
 ]
 
 [workspace.package]
-version = "0.1.1"
+version = "0.1.2"
 authors = ["StackOverflowExcept1on"]
 edition = "2024"
 repository = "https://github.com/StackOverflowExcept1on/simple-graph"
@@ -19,4 +19,4 @@ linked-hash-map = "0.5.6"
 linked_hash_set = "0.1.5"
 thiserror = "2.0"
 
-simple-graph = { version = "0.1.1", path = "simple-graph" }
+simple-graph = { version = "0.1.2", path = "simple-graph" }
