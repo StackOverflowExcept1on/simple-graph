@@ -1,4 +1,4 @@
-use std::collections::{hash_map::DefaultHasher, HashMap, HashSet, VecDeque};
+use std::collections::{HashMap, HashSet, VecDeque, hash_map::DefaultHasher};
 use std::hash::Hasher;
 
 use linked_hash_map::LinkedHashMap;
@@ -198,11 +198,11 @@ impl<V: Label, E: Label> Graph<V, E> {
     /// assert_eq!(graph.add_edge(new_york, kazan, 9000), Err(GraphOperationError::VertexDoesNotExist));
     /// ```
     pub fn add_edge(&mut self, from: VertexId, to: VertexId, edge: E) -> Result<()> {
-        if self.vertices.get(&to).is_some() {
-            if let Some(neighbours) = self.vertices.get_mut(&from) {
-                neighbours.insert(([from, to], edge));
-                return Ok(());
-            }
+        if self.vertices.get(&to).is_some()
+            && let Some(neighbours) = self.vertices.get_mut(&from)
+        {
+            neighbours.insert(([from, to], edge));
+            return Ok(());
         }
         Err(GraphOperationError::VertexDoesNotExist)
     }
@@ -272,11 +272,11 @@ impl<V: Label, E: Label> Graph<V, E> {
     /// assert_eq!(graph.remove_edge(moscow, vladimir), Err(GraphOperationError::EdgeDoesNotExist));
     /// ```
     pub fn remove_edge(&mut self, from: VertexId, to: VertexId) -> Result<()> {
-        if let Ok(edge) = self.get_edge(from, to).cloned() {
-            if let Some(neighbours) = self.vertices.get_mut(&from) {
-                neighbours.remove(&edge);
-                return Ok(());
-            }
+        if let Ok(edge) = self.get_edge(from, to).cloned()
+            && let Some(neighbours) = self.vertices.get_mut(&from)
+        {
+            neighbours.remove(&edge);
+            return Ok(());
         }
         Err(GraphOperationError::EdgeDoesNotExist)
     }

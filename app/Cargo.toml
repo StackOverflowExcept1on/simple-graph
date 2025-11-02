@@ -1,10 +1,11 @@
 [package]
 name = "app"
-version = "0.1.0"
-edition = "2021"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
 
 [dependencies]
-thiserror = "1.0"
-argh = "0.1.9"
-colored = "2.0.0"
-simple-graph = { path = "../simple-graph" }
+argh.workspace = true
+colored.workspace = true
+simple-graph.workspace = true
+thiserror.workspace = true

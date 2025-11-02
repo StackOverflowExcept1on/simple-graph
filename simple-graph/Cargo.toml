@@ -1,15 +1,15 @@
 [package]
 name = "simple-graph"
-version = "0.1.1"
-authors = ["StackOverflowExcept1on"]
-edition = "2021"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
 description = "Graph library with ability to serialize/deserialize Trivial Graph Format"
-repository = "https://github.com/StackOverflowExcept1on/simple-graph"
-license = "MIT"
+repository.workspace = true
+license.workspace = true
 keywords = ["graph", "breadth-first-search", "depth-first-search"]
 categories = ["data-structures", "parsing"]
 
 [dependencies]
-thiserror = "1.0"
-linked-hash-map = "0.5.6"
-linked_hash_set = "0.1.4"
+linked-hash-map.workspace = true
+linked_hash_set.workspace = true
+thiserror.workspace = true
